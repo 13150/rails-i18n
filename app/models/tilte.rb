@@ -1,0 +1,2 @@
+class Tilte < ApplicationRecord
+end

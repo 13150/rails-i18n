@@ -1,0 +1,22 @@
+<%= form_with(model: tilte) do |form| %>
+  <% if tilte.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tilte.errors.count, "error") %> prohibited this tilte from being saved:</h2>
+
+      <ul>
+        <% tilte.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
